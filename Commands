@@ -1,0 +1,28 @@
+1) Git config :- Configures the username and email address.
+2) Girt init :- Initialise a git repository.
+3) Git add . :- Add new files to staging area.
+4) Git diff :- To view changes to a file.
+5) Git commit :- To commit changes to hread but not to remote repository.
+6) Git reset :- To undo changes to the state of a git repo
+7) Git status :- Displays the state of the working directory and staging area
+8) Git merge :- Merge a branch into an active branch.
+9) Git push :- Upload content from local repository to a remote repo.
+10) Git pull :- Fetch and download content from a remote repository.
+
+Difference between *git pull* and *git fetch* :-
+
+Git fetch :-
+a) Only downloads new data from the remote reo.
+b) Does not integrate any of its new data into the working files.
+c) Can be done any time to update the remote-tracking branches.
+d) Command :- git fetch origin git fetch --all
+
+Git pull :-
+a) Updates the current head branch with the latest changes from the remote server.
+b) Downloads new data and integrates it with the current working files.
+c) Tries to merge remote changes with your local ones.
+d) Command :- git pull origin master
+
+Git Merge Conflict :- This happens when the merge branches that have competing changes and git asks for your help to which one to keep and which one to discard. This can be resolved in the pull requests section by merge conflict. This can also be resolved using Git Bash, by opening the repo in the Bash and then it will show all the files affected by the merge conflict.
+
+Git Stash :- It takes your modified tracks files and saves it on a stack of unfinished changes(changes that are not committed yet) that you can reapply any time. This is used when you want to switch to a different branch without committing your work for the previous branch.
