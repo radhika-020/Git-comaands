@@ -1,13 +1,19 @@
 1) Git config :- Configures the username and email address.
-2) Girt init :- Initialise a git repository.
+  a) git config -gloabl user.name :- For username
+  b) git config -gloabl user.email :- For user email
+2) Git init :- Initialise an empty git repository.
 3) Git add . :- Add new files to staging area.
+  a) git add *filename* :- Adds a specific file.
+  b) git add * :- Adds all the files.
 4) Git diff :- To view changes to a file.
-5) Git commit :- To commit changes to hread but not to remote repository.
-6) Git reset :- To undo changes to the state of a git repo
+5) Git commit :- To commit changes to head but not to remote repository.
+6) Git reset :- To undo changes to the state of a git repository. Unstages a file but keeps all the necessary data within it.
 7) Git status :- Displays the state of the working directory and staging area
 8) Git merge :- Merge a branch into an active branch.
 9) Git push :- Upload content from local repository to a remote repo.
 10) Git pull :- Fetch and download content from a remote repository.
+11) Git status :- To track all the files.
+12) Git clone :- To get the existing repository from a URL.
 
 Difference between *git pull* and *git fetch* :-
 
@@ -26,3 +32,47 @@ d) Command :- git pull origin master
 Git Merge Conflict :- This happens when the merge branches that have competing changes and git asks for your help to which one to keep and which one to discard. This can be resolved in the pull requests section by merge conflict. This can also be resolved using Git Bash, by opening the repo in the Bash and then it will show all the files affected by the merge conflict.
 
 Git Stash :- It takes your modified tracks files and saves it on a stack of unfinished changes(changes that are not committed yet) that you can reapply any time. This is used when you want to switch to a different branch without committing your work for the previous branch.
+
+Difference between *git merge* and *git rebase* :-
+
+Git Merge :-
+a) Creates an extra merge commit every time you need to incorporate changes.
+b) Pollutes your feature branch history.
+
+Git Rebase :-
+a) Incorporates all the new commits in the master branch.
+b) Re-writes the project history by creating brand new commits for each commit in the original branch.
+
+Using Git command line :-
+git init
+git add .
+git commit -m 'add files'
+git branch -M main
+git remote add origin https://github.com/radhika-020/*repository name*.git
+git push -u origin main 
+git pull *repository link*
+
+To push a local folder on Git :-
+ls -l
+git init
+echo *Add Readme.md file in this echo statement* > README.md
+git add README.md
+git commit -o '*Add a commit message here*'
+git status
+
+To create a new branch :-
+git checkout -b **Branch Name**
+git branch :- To checkout the current branch
+
+To edit README.md file and push, in the branch other than the master branch as mentioned earlier,
+Edit on the local code editor and save it.
+Then go to the command line,
+git add README.md
+git commit -m 'Edited README.md'
+git status
+
+To switch to the master branch :-
+git checkout master
+
+To merge both the branches :-
+git merge *Other Branch name*
