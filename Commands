@@ -1,6 +1,6 @@
 1) Git config :- Configures the username and email address.
-  a) git config -gloabl user.name :- For username
-  b) git config -gloabl user.email :- For user email
+  a) git config -global user.name :- For username
+  b) git config -global user.email :- For user email
 2) Git init :- Initialise an empty git repository.
 3) Git add . :- Add new files to staging area.
   a) git add *filename* :- Adds a specific file.
